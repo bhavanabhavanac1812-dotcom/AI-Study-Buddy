@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Study Buddy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">🤖 AI Study Buddy</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#notes">Notes</a>
+      <a href="#quiz">Quiz</a>
+      <a href="#planner">Planner</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div>
+        <span class="tag">SMARTBRIDGE PROJECT</span>
+        <h1>Study smarter with your <span>AI Study Buddy</span></h1>
+        <p>Organize your subjects, create quick notes, practice quizzes and plan your study time in one simple web app.</p>
+        <a class="btn" href="#notes">Start Studying</a>
+      </div>
+      <div class="hero-card">
+        <div class="bot">🤖</div>
+        <h3>Your personal study companion</h3>
+        <p>Notes • Quiz • Planner • Progress</p>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="feature"><b>📚 Notes</b><span>Save and review important topics.</span></div>
+      <div class="feature"><b>🧠 Quiz</b><span>Test your knowledge instantly.</span></div>
+      <div class="feature"><b>📅 Planner</b><span>Track your study tasks.</span></div>
+      <div class="feature"><b>📈 Progress</b><span>See completed study tasks.</span></div>
+    </section>
+
+    <section id="notes" class="section">
+      <div class="section-title">
+        <div><span class="tag">QUICK NOTES</span><h2>My Study Notes</h2></div>
+      </div>
+      <div class="panel">
+        <input id="noteTitle" type="text" placeholder="Topic title">
+        <textarea id="noteText" placeholder="Write your study notes here..."></textarea>
+        <button class="btn" onclick="addNote()">Save Note</button>
+        <div id="notesList" class="note-list"></div>
+      </div>
+    </section>
+
+    <section id="quiz" class="section">
+      <div class="section-title"><div><span class="tag">PRACTICE</span><h2>Quick Quiz</h2></div></div>
+      <div class="quiz panel">
+        <h3 id="question"></h3>
+        <div id="options"></div>
+        <p id="quizResult" class="result"></p>
+        <button class="btn secondary" onclick="nextQuestion()">Next Question</button>
+      </div>
+    </section>
+
+    <section id="planner" class="section">
+      <div class="section-title"><div><span class="tag">PLANNER</span><h2>Study Task Planner</h2></div></div>
+      <div class="panel">
+        <div class="task-input">
+          <input id="taskText" type="text" placeholder="Enter a study task">
+          <button class="btn" onclick="addTask()">Add Task</button>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-label"><span>Progress</span><b id="progressText">0%</b></div>
+          <div class="progress"><div id="progressBar"></div></div>
+        </div>
+        <div id="taskList"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>AI Study Buddy • SmartBridge Project • Built with HTML, CSS and JavaScript</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
